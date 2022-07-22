@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background-color: bisque;
+}
+
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 64px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 64px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.status {
+  font-size: 24px;
+  font-family: 'Century Gothic';
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.btn-reset {
+  margin: 3rem;
+  width: 10rem;
+  height: 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(24, 146, 228);
+  -webkit-box-shadow: 10px 10px 42px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 42px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 42px -4px rgba(0, 0, 0, 0.75);
+}
+
+.btn-reset:active{
+  box-shadow: none;
+}
+
+.history{
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.btn-history{
+  font-size: 0.85rem;
+  padding: 0.25rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.35rem;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  -ms-border-radius: 0.35rem;
+  -o-border-radius: 0.35rem;
+  cursor: pointer;
+  background-color: rgb(24, 146, 228);
+  font-weight: 600;
+  color: white;
 }
